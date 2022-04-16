@@ -1,10 +1,7 @@
 # Проектная работа 5 спринта
 
 ## Ссылка на репозиторий с проектом:
-https://github.com/AlexanderNkn/Async_API_sprint_2
-
-## Ссылка на репозиторий ETL:
-https://github.com/aximon/ETL
+https://github.com/VladOS95-cyber/Async_API_sprint_2
 
 ## Описание
 Это API для поиска информации по фильмам, персонам и жанрам.
@@ -12,7 +9,7 @@ https://github.com/aximon/ETL
 ## Установка
 - склонируйте проект с реппозитория GitHub
     ```
-    git clone https://github.com/AlexanderNkn/Async_API_sprint_2.git
+    git clone https://github.com/VladOS95-cyber/Async_API_sprint_2
     ```
 - переименуйте файл с переменными окружения для тестирования
     ```

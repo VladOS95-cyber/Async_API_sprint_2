@@ -1,61 +1,60 @@
-# Проектная работа 5 спринта
+## Async Movie API service
 
-## Ссылка на репозиторий с проектом:
-https://github.com/VladOS95-cyber/Async_API_sprint_2
+## Description
+This is an API for searching information by movies, persons and genres.
 
-## Описание
-Это API для поиска информации по фильмам, персонам и жанрам.
+## Instruction
+Link to repository: https://github.com/VladOS95-cyber/Async_API_sprint_2
 
-## Установка
-- склонируйте проект с реппозитория GitHub
+- clone project
     ```
     git clone https://github.com/VladOS95-cyber/Async_API_sprint_2
     ```
-- переименуйте файл с переменными окружения для тестирования
+- rename the file with environment variables for testing
     ```
     mv envs/.fastapi.env.sample envs/.fastapi.env
     ```
-- соберите образ
+- build Docker containers
     ```
     docker-compose build --no-cache
     ```
-- запустите проект
+- run containers
     ```
     docker-compose up -d
     ```
 
-## Тестирование
-### В контейнере
-- тесты запускаются автоматически при старте контейнера. Для перезапуска выполните
+## Testing
+### In a container
+- tests run automatically when the container starts. To restart:
     ```
     docker-compose start tests
     ```
-### Локально
-- активируйте виртуальное окружение
-- установите необходимые библиотеки
+### Local
+- activate the virtual environment
+- install the necessary libraries
     ```
     pip install -r requirements.txt
     ```
-- соберите образ по инструкции [выше](#Установка)
-- запустите проект
+- create image according to instruction [above](#Установка)
+- run containers
     ```
     docker-compose -f docker-compose_local_test.yml up -d
     ```
-- запустите тесты
+- run tests
    ```
    pytest tests
    ```
-### Дополнительные возможности
-- просмотр логов
+### Additional features
+- viewing logs
     ```
     docker-compose logs -f
     ```
 
-## Использование
-### Документация доступна по адресу
+## Usage
+### Documentation is available at
 -    http://localhost/api/openapi
-### Примеры запросов
-- получить список фильмов по жанру
+### Query examples
+- get a list of films by genre
     ```
     /api/v1/film?filter[genre]=<comedy-uuid>&sort=-imdb_rating&page[size]=50&page[number]=1
     ```
@@ -76,7 +75,7 @@ https://github.com/VladOS95-cyber/Async_API_sprint_2
         ...
     ] 
     ```
-- получить полную информацию по фильму
+- get complete information on the film
     ```
     /api/v1/film/<uuid:UUID>/
     ```
